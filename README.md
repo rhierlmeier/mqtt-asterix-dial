@@ -13,7 +13,9 @@ can be configured via the `-config` command line param. Default location is `./c
 
 You can find a sample configuration file [here](./conf.yaml).
 
+## Usage in Docker
 
+To use mqtt-asterisk-dial with Docker, you can utilize the provided Docker Compose configuration. You can find the sample Docker Compose file [here](./samples/docker/docker-compose.yaml).
 
 ## Project Structure
 
