@@ -44,7 +44,7 @@ func main() {
 
 	for _, call := range cfg.Calls {
 		log.Printf("Processing call: %s", call.Name)
-		dialer, err := dial.NewDialer(mqttClient, cfg.Paths, call)
+		dialer, err := dial.NewDialer(mqttClient, cfg.CallFileDir, call)
 		if err != nil {
 			log.Fatalf("Error creating dialer: %v", err)
 		}

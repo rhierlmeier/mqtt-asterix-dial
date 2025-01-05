@@ -1,0 +1,22 @@
+
+# Defines the connection URL to MQTT
+# e.g tcp://localhost:1883, ssl://localhost:8883
+broker: ssl://localhost:8883
+
+
+call_file_dir: test/out
+
+calls:
+  - name: Hargassner Stoermeldung
+    topic: homie/hargassner/stoerung/active
+    value: "true"
+    template: |-
+      Channel: Local/start@heizung_melde_kette
+      Context: stoermeldung
+      Extension: 10
+      Setvar: stoerNr={{ .stoerNr }}
+      
+    variables:
+      - name: stoerNr
+        topic: homie/hargassner/stoerung/nr
+    
