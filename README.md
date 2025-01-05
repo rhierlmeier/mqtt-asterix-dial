@@ -1,13 +1,26 @@
-# mqtt-dial
+# mqtt-asterisk-dial
 
-mqtt-dial is a Go application that connects to an MQTT broker and manages dialing processes. This project is designed to provide a simple interface for interacting with MQTT topics and handling dialing logic.
+mqtt-asterisk-dial is a Go application that connects to an MQTT broker. It obereves one or more MQTT topics. When the values of such a topic has a defined
+values then an Asterisk call file is written.
+
+The content of the call files is rendered via a GO template. This template has 
+access to values of MQTT topics.
+
+# Configuration
+
+The mqtt-asterisk-dial is configured via a configuration yaml file that
+can be configured via the `-config` command line param. Default location is `./conf.yaml`).
+
+You can find a sample configuration file [here](./conf.yaml).
+
+
 
 ## Project Structure
 
 ```
-mqtt-dial
+mqtt-asterisk-dial
 ├── cmd
-│   └── mqtt-dial
+│   └── mqtt-asterisk-dial
 │       └── main.go        # Entry point of the application
 ├── internal
 │   ├── config
@@ -25,7 +38,7 @@ mqtt-dial
 1. **Clone the repository:**
    ```
    git clone <repository-url>
-   cd mqtt-dial
+   cd mqtt-asterisk-dial
    ```
 
 2. **Install dependencies:**
@@ -41,7 +54,7 @@ mqtt-dial
 To run the application, execute the following command:
 
 ```
-go run cmd/mqtt-dial/main.go
+go run cmd/mqtt-asterisk-dial/main.go
 ```
 
 ## Contributing

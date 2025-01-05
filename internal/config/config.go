@@ -89,7 +89,7 @@ func (c *Config) Validate() error {
 	}
 
 	if c.ClientId == "" {
-		c.ClientId = "mqtt-dial"
+		c.ClientId = "mqtt-asterisk-dial"
 	}
 
 	if c.CallFileDir == "" {

@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 go build -o mqtt-dial cmd/mqtt-dial/main.go
+RUN CGO_ENABLED=0 go build -o mqtt-asterisk-dial cmd/mqtt-asterisk-dial/main.go
 
 # Start a new stage from scratch
 FROM alpine:latest  
@@ -22,7 +22,7 @@ FROM alpine:latest
 WORKDIR /app/
 
 # Copy the Pre-built binary file from the previous stage
-COPY --from=builder /app/mqtt-dial .
+COPY --from=builder /app/mqtt-asterisk-dial .
 
 # Command to run the executable
-CMD ["./mqtt-dial"]
+CMD ["./mqtt-asterisk-dial"]

@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"log"
-	config "mqtt-dial/internal/config"
-	"mqtt-dial/internal/dial"
+	config "mqtt-asterisk-dial/internal/config"
+	"mqtt-asterisk-dial/internal/dial"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
@@ -14,7 +14,7 @@ func main() {
 	cfg := config.Config{}
 
 	flag.Usage = func() {
-		log.Printf("Usage of %s:\n", "mqtt-dial")
+		log.Printf("Usage of %s:\n", "mqtt-asterisk-dial")
 		flag.PrintDefaults()
 	}
 	confFile := flag.String("config", "./config.yaml", "Path to the configuration file")

@@ -1,4 +1,4 @@
-module mqtt-dial
+module mqtt-asterisk-dial
 
 go 1.22
 

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
-	"mqtt-dial/internal/config"
+	"mqtt-asterisk-dial/internal/config"
 	"os"
 	"text/template"
 
